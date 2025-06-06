@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DemoMS1.Controllers
@@ -25,7 +26,8 @@ namespace DemoMS1.Controllers
             {
                 Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
                 TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+                Summary = $"{Summaries[Random.Shared.Next(Summaries.Length)]}{"DemoMS1"}"
+
             })
             .ToArray();
         }
