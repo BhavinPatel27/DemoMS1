@@ -8,6 +8,7 @@ namespace DemoMS1.Controllers
     public class StudentController : ControllerBase
     {
         // GET: api/Student
+        //Demo commment
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
